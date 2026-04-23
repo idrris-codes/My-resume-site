@@ -4,135 +4,253 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Idris Sharipov — Telegram Bot & Web Developer</title>
-  <meta name="description" content="Разработка Telegram-ботов, сайтов и AI-решений." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta
+    name="description"
+    content="Разработка Telegram-ботов, сайтов и AI-решений под задачи бизнеса и личных проектов."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div id="languageOverlay" class="language-overlay">
-    <div class="language-box">
-      <div class="language-label">Choose language</div>
-      <h2>Выберите язык</h2>
-      <p>Пожалуйста, выберите удобный язык сайта.</p>
-      <div class="language-buttons">
-        <button class="lang-btn" data-lang="ru">Русский</button>
-        <button class="lang-btn" data-lang="en">English</button>
-        <button class="lang-btn" data-lang="tj">Тоҷикӣ</button>
+  <div id="languageOverlay" class="language-overlay active">
+    <div class="language-modal">
+      <div class="language-badge">Language</div>
+      <h2 class="language-title">Выберите язык</h2>
+      <p class="language-text">
+        Выберите удобный язык, чтобы посмотреть сайт и понять, чем я могу быть полезен.
+      </p>
+      <div class="language-grid">
+        <button class="language-btn" data-lang="ru">Русский</button>
+        <button class="language-btn" data-lang="en">English</button>
+        <button class="language-btn" data-lang="tj">Тоҷикӣ</button>
       </div>
     </div>
   </div>
 
-  <main class="container">
+  <button id="changeLanguageBtn" class="change-language-btn" type="button">
+    🌐 <span data-i18n="change_language_btn">Сменить язык</span>
+  </button>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="brand">
+        <span class="brand-dot"></span>
+        <span>Idris Sharipov</span>
+      </a>
+
+      <nav class="nav">
+        <a href="#about" data-i18n="nav_about">Обо мне</a>
+        <a href="#services" data-i18n="nav_services">Услуги</a>
+        <a href="#advantages" data-i18n="nav_advantages">Преимущества</a>
+        <a href="#contact" data-i18n="nav_contact">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
     <section class="hero">
-      <div class="hero-grid">
-        <div class="hero-content">
+      <div class="container hero-grid">
+        <div class="hero-left reveal">
           <div class="eyebrow">
-            <span class="dot"></span>
-            <span data-i18n="available">Available for work</span>
+            <span class="eyebrow-dot"></span>
+            <span data-i18n="eyebrow">Available for work</span>
           </div>
 
-          <h1 data-i18n="hero_title">Разработка Telegram-ботов и сайтов под ключ</h1>
+          <h1 data-i18n="hero_title">
+            Telegram-боты и сайты, которые выглядят профессионально и работают на результат
+          </h1>
 
-          <div class="role" data-i18n="hero_role">Telegram Bot & Web Developer</div>
-
-          <p class="lead" data-i18n="hero_text_1">
-            Я разрабатываю Telegram-ботов, сайты и AI-решения, которые помогают бизнесу работать удобнее, выглядеть профессионально и получать больше заявок.
+          <p class="hero-role" data-i18n="hero_role">
+            Telegram Bot & Web Developer
           </p>
 
-          <p class="lead secondary" data-i18n="hero_text_2">
-            Моя задача — не просто написать код, а сделать продукт, который реально полезен, понятен для клиента и вызывает доверие с первого взгляда.
+          <p class="hero-text" data-i18n="hero_text_1">
+            Я разрабатываю Telegram-ботов, сайты и AI-решения для тех, кому нужен не просто код,
+            а удобный, понятный и сильный цифровой продукт.
           </p>
 
-          <div class="actions">
-            <a class="btn btn-primary" href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer" data-i18n="hero_btn_1">Написать в Telegram</a>
-            <a class="btn btn-secondary" href="#services" data-i18n="hero_btn_2">Что я делаю</a>
+          <p class="hero-text hero-text-soft" data-i18n="hero_text_2">
+            Моя задача — сделать решение, которое помогает бизнесу выглядеть серьёзно, упрощает
+            работу, экономит время и производит хорошее впечатление на клиентов.
+          </p>
+
+          <div class="hero-actions">
+            <a
+              class="btn btn-primary"
+              href="https://t.me/yourusername"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-i18n="hero_btn_primary"
+            >
+              Написать в Telegram
+            </a>
+
+            <a class="btn btn-secondary" href="#services" data-i18n="hero_btn_secondary">
+              Посмотреть услуги
+            </a>
           </div>
 
-          <div class="highlights">
-            <span data-i18n="highlight_1">Аккуратный современный дизайн</span>
-            <span data-i18n="highlight_2">Решения под конкретную задачу</span>
-            <span data-i18n="highlight_3">Понятный и удобный результат</span>
+          <div class="hero-points">
+            <div class="hero-point">
+              <span class="point-dot"></span>
+              <span data-i18n="hero_point_1">Аккуратный современный дизайн</span>
+            </div>
+            <div class="hero-point">
+              <span class="point-dot"></span>
+              <span data-i18n="hero_point_2">Решения под конкретную задачу</span>
+            </div>
+            <div class="hero-point">
+              <span class="point-dot"></span>
+              <span data-i18n="hero_point_3">Подача, которая вызывает доверие</span>
+            </div>
           </div>
         </div>
 
-        <div class="photo-wrap">
+        <div class="hero-right reveal">
           <div class="photo-shell">
-            <img class="photo" src="my-photo.jpg" alt="Idris Sharipov" />
-            <div class="photo-card">
-              <small data-i18n="photo_label">Developer</small>
-              <strong data-i18n="photo_role">Telegram Bot & Web Developer</strong>
+            <img class="photo" src="your-photo.jpg" alt="Idris Sharipov" />
+            <div class="photo-info">
+              <div class="photo-info-label" data-i18n="photo_label">Developer</div>
+              <div class="photo-info-role" data-i18n="photo_role">
+                Telegram Bot & Web Developer
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="about">
-      <div class="section-title-wrap">
-        <div class="section-title-label">About</div>
-        <h2 class="section-title" data-i18n="about_title">Обо мне</h2>
-      </div>
-
-      <div class="about" data-i18n="about_text">
-        Я делаю проекты, которые выглядят профессионально и при этом реально работают. Для меня важно, чтобы сайт или бот был не просто “готов”, а был удобным, понятным и вызывал желание пользоваться им дальше.
-      </div>
-    </section>
-
-    <section id="services">
-      <div class="section-title-wrap">
-        <div class="section-title-label">Services</div>
-        <h2 class="section-title" data-i18n="services_title">Услуги</h2>
-      </div>
-
-      <div class="services">
-        <div class="service">
-          <h3 data-i18n="service_1_title">Telegram-боты</h3>
-          <p data-i18n="service_1_text">
-            Боты для заявок, продаж, автоматизации, общения с клиентами, AI-функций и внутренних задач бизнеса.
-          </p>
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div class="section-kicker">About</div>
+          <h2 data-i18n="about_title">Обо мне</h2>
         </div>
 
-        <div class="service">
-          <h3 data-i18n="service_2_title">Сайты</h3>
-          <p data-i18n="service_2_text">
-            Лендинги, личные сайты и веб-страницы с аккуратным дизайном, понятной структурой и современной подачей.
+        <div class="about-block reveal">
+          <p data-i18n="about_text_1">
+            Я создаю проекты, которые выглядят профессионально, работают стабильно и помогают
+            клиенту выделяться. Для меня важно, чтобы результат был не просто готовым, а
+            действительно удобным, понятным и достойным того, чтобы показывать его своей аудитории.
           </p>
-        </div>
-
-        <div class="service">
-          <h3 data-i18n="service_3_title">AI-решения</h3>
-          <p data-i18n="service_3_text">
-            Интеграции с AI и API для умных функций, автоматизации и более удобного пользовательского опыта.
+          <p data-i18n="about_text_2">
+            Я подхожу к работе не как к набору случайных действий, а как к созданию полноценного
+            решения: продумываю структуру, удобство, логику и визуальную подачу, чтобы итог выглядел
+            уверенно и вызывал доверие.
           </p>
         </div>
       </div>
     </section>
 
-    <section id="why">
-      <div class="section-title-wrap">
-        <div class="section-title-label">Why me</div>
-        <h2 class="section-title" data-i18n="why_title">Почему выбирают меня</h2>
-      </div>
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div class="section-kicker">Services</div>
+          <h2 data-i18n="services_title">Услуги</h2>
+        </div>
 
-      <div class="about" data-i18n="why_text">
-        Я не просто собираю шаблон. Я стараюсь понять задачу, предложить лучшее решение и сделать результат, который выглядит серьёзно, работает стабильно и помогает клиенту выделяться, а не выглядеть как ещё один обычный проект.
+        <div class="services-grid">
+          <article class="service-card reveal">
+            <div class="service-number">01</div>
+            <h3 data-i18n="service_1_title">Telegram-боты</h3>
+            <p data-i18n="service_1_text">
+              Боты для заявок, автоматизации, общения с клиентами, продаж, AI-функций и внутренних
+              бизнес-задач.
+            </p>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-number">02</div>
+            <h3 data-i18n="service_2_title">Сайты</h3>
+            <p data-i18n="service_2_text">
+              Лендинги, личные сайты и веб-страницы с аккуратным дизайном, понятной структурой и
+              сильной подачей.
+            </p>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-number">03</div>
+            <h3 data-i18n="service_3_title">AI-решения</h3>
+            <p data-i18n="service_3_text">
+              Интеграции с AI и API для умных функций, автоматизации процессов и более современного
+              взаимодействия с пользователем.
+            </p>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section id="cta">
-      <div class="section-title-wrap">
-        <div class="section-title-label">Contact</div>
-        <h2 class="section-title" data-i18n="cta_title">Готов обсудить твой проект</h2>
-      </div>
+    <section id="advantages" class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div class="section-kicker">Advantages</div>
+          <h2 data-i18n="advantages_title">Почему выбирают меня</h2>
+        </div>
 
-      <div class="approach" data-i18n="cta_text">
-        Если тебе нужен Telegram-бот, сайт или AI-решение, напиши мне в Telegram. Обсудим задачу и подберём лучший вариант именно под твои цели.
-      </div>
+        <div class="advantages-grid">
+          <div class="advantage-item reveal">
+            <h3 data-i18n="adv_1_title">Понимание задачи</h3>
+            <p data-i18n="adv_1_text">
+              Я стараюсь понять, что именно нужно клиенту, а не просто сделать набор случайных функций.
+            </p>
+          </div>
 
-      <div class="footer-cta">
-        <a class="btn btn-primary" href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer" data-i18n="cta_btn">Связаться</a>
+          <div class="advantage-item reveal">
+            <h3 data-i18n="adv_2_title">Аккуратная подача</h3>
+            <p data-i18n="adv_2_text">
+              Для меня важен не только код, но и то, как продукт выглядит и воспринимается пользователем.
+            </p>
+          </div>
+
+          <div class="advantage-item reveal">
+            <h3 data-i18n="adv_3_title">Практическая польза</h3>
+            <p data-i18n="adv_3_text">
+              Я делаю решения, которые помогают экономить время, упрощать процессы и работать удобнее.
+            </p>
+          </div>
+
+          <div class="advantage-item reveal">
+            <h3 data-i18n="adv_4_title">Индивидуальный подход</h3>
+            <p data-i18n="adv_4_text">
+              Я не делаю безликие шаблоны — каждый проект подстраиваю под реальную задачу и цель.
+            </p>
+          </div>
+        </div>
+
+        <div class="why-block reveal">
+          <p data-i18n="why_main_text">
+            Я не делаю проекты “просто чтобы были”. Мне важно, чтобы результат выглядел уверенно,
+            работал надёжно и помогал клиенту выглядеть сильнее на фоне конкурентов и типовых AI-генераций.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-last">
+      <div class="container">
+        <div class="cta-box reveal">
+          <div class="section-kicker">Contact</div>
+          <h2 data-i18n="cta_title">Готов обсудить ваш проект</h2>
+          <p data-i18n="cta_text">
+            Если вам нужен Telegram-бот, сайт или AI-решение, которое будет выглядеть достойно и
+            приносить пользу, напишите мне в Telegram. Обсудим задачу и подберём лучшее решение под
+            вашу цель.
+          </p>
+          <a
+            class="btn btn-primary"
+            href="https://t.me/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-i18n="cta_btn"
+          >
+            Связаться
+          </a>
+        </div>
       </div>
     </section>
   </main>
