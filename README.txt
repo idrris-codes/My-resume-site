@@ -1,0 +1,1 @@
+1) Замени your-photo.jpg на своё фото\n2) Замени https://t.me/yourusername на свой Telegram\n3) Загрузи все файлы в GitHub и Railway задеплоит сайт\n
